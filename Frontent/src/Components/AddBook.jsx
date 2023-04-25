@@ -1,4 +1,4 @@
-import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material'
+import { Button,TextField } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import { useState } from 'react'
@@ -54,7 +54,7 @@ const AddBook = () => {
         <TextField value={inputs.name} onChange={handleChange} label='Enter Book Name' margin='normal' fullWidth variant='outlined' name='name'/> 
         <TextField value={inputs.author} onChange={handleChange} label='Author' margin='normal' fullWidth variant='outlined' name='author'/>
         </Box>
-        <TextField value={inputs.description} onChange={handleChange} label='Genre' margin='normal' fullWidth variant='outlined' name='description'/>
+        <TextField value={inputs.description} onChange={handleChange} label='Description' margin='normal' fullWidth variant='outlined' name='description'/>
         <TextField value={inputs.price} onChange={handleChange} label='Price' type={'number'} margin='normal' fullWidth variant='outlined' name='price'/>
         <TextField value={inputs.image} onChange={handleChange} label='Paste Your Image Url' margin='normal' fullWidth variant='outlined' name='image'/>
         <Button type='submit' variant='contained' >Add Book</Button>

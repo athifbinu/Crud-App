@@ -59,15 +59,13 @@ const getById = async (req,res,next) => {
 
 const updateBook = async (req,res,next) => {
     const id = req.params.id;
-    const {name,author,description,price,available,image} = req.body;
+    const {name,description,price,image} = req.body;
     let book ;
     try {
         book = await Book.findByIdAndUpdate(id,{
             name,
-            author,
             description,
             price,
-            available,
             image
         });
         book = await book.save()
